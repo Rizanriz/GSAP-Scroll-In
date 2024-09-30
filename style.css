@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 700vh !important;
+}
+body {
+    overflow: hidden; 
+    position: relative; 
+}
+.scrollable {
+    overflow: auto;
+    scrollbar-width: none; 
+}
+.scrollable::-webkit-scrollbar {
+    display: none; 
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 13vw;
+    font-weight: 600;
+    line-height: 90%;
+    letter-spacing: 2px;
+    color: #fff;
+}
+h2{
+    text-transform: uppercase;
+    font-size:10vw;
+    font-weight: 600;
+    line-height: 90%;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 300px;
+}
+
+p {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+}
+
+.hero {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: url(./img/cod.jpg) no-repeat 50% 50%;   
+    background-size: cover;
+}
+
+.hero p {
+    width: 55%;
+    text-align: center;
+}
+
+.about {
+    padding: 4em 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10em;
+    background-color: #667e74;
+}
+
+.about-img,
+.about-copy {
+    flex: 1;
+}
+
+.about img{
+    height: 75%;
+    border: 2px solid black;
+}
+
+.about-copy h1 {
+    text-align: center;
+    font-size: 6vw;
+    color: #181E1E;
+}
+
+.footer {
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url(./img/froza.jpg) fixed;
+    background-size: cover;
+}
+
+
+.sticky {
+    position: relative;
+    perspective: 1000px;
+}
+.intro{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    z-index: 2;
+}
+.intro-col {
+    flex: 1;
+    display: flex;
+}
+
+.intro-col P {
+    flex: 1;
+}
+
+.intro-col p span {
+    display: inline-block;
+}
+
+.intro-col:nth-child(2) p {
+    text-align: right;
+}
+
+.img-1,
+.img-2,
+.img-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img-2 { 
+    clip-path: polygon(40% 25%, 60% 25%, 60% 75%, 40% 75%);
+}
+
+.img-3 {
+    clip-path: polygon(50% 25%, 50% 25%, 50% 75%, 50% 75%);
+}
+
+.img-3 img {
+    transform-origin: top right;
+    transform: scale(3);
+}
+
+.copy {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(-75deg) scale(0.5);
+    transform-origin: bottom left;
+    display: none;
+}
+.copy h1{
+    font-size: 5vw;
+    text-align: center;
+    color: #fff;
+}
+
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 20vw;
+    }
+    .hero p {
+        width: 100%;
+    }
+    .about {
+        padding: 4em 2em;
+        flex-direction: column;
+        gap: 4em;
+    }
+    .about-copy {
+        flex: 0.5;
+    }
+    .about-img {
+        margin-top: 4em;
+        height: 100%;
+    }
+    .intro,
+    .intro-col {
+        flex-direction: column;
+    }
+    .intro-col p {
+        text-align: center !important;
+    }
+    .copy {
+        width: 90%;
+    }
+    .copy h1 {
+        font-size: 10vw;
+    }
+}
