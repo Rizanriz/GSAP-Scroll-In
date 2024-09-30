@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ease: "none",
             scrollTrigger: {
                 trigger: stickySection,
-                start: () => `${window.innerHeight * 3}`,
+                start: () => `${window.innerHeight * 1}`,
                 end: () => `${window.innerHeight * 4}`,
                 scrub: true,
             },
